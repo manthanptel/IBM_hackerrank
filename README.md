@@ -1,12 +1,28 @@
 ##  Question 1
-Jayme has a list of consecutive numbers beginning with 7. Her arrangement of those numbers is called a beautiful arrangement if at least one of the following is true:
-• The number present at the ith position is divisible by i.
-• iis divisible by the number present at the Ah position.
+Jayme has a list of consecutive numbers beginning with 7. Her arrangement of those numbers is called a beautiful arrangement if at least one of the following is true:  
+
+
+
+
+• The number present at the ith position is divisible by i.  
+• /is divisible by the number present at the ith position.  
 
 Language C
 
 Determine how many beautiful arrangements of her integers is possible. For example, she has n = 5 integers, [1,2,3,4,5]. Using 1-based indexing, there are the following arrangements satisfying the above:
-[1,2,3,4,5]
+
+
+``[1,2,3,4,5]``  
+``[2,1,3,4,5]``
+``[3,2,1,4,5]``
+``[4,2,3,1,5]``
+``[5,2,3,4,1]``
+``[4,1,3,2,5]``
+``[1,4,3,2,5]``
+``[3,4,1,2,5]``
+``[2,4,3,1,5]``
+``[5,4,3,2,1]``
+
 Autocomplete Ready
 1 > #include <assert.h
 *Complete the arr
@@ -29,33 +45,35 @@ I
 29
 30
 31> int ma
-[2,1,3,4,5]
-[3,2,1,4,5]
-[4,2,3,1,5]
-[5,2,3,4,1]
-[4,1,3,2,5]
-[1,4,3,2,5]
-[3,4,1,2,5]
-[2,4,3,1,5]
-[5,4,3,2,1]
-In the first row, both conditions hold for all elements: each i equals the value at index i, so each iis divisible by the element and each element is divisible by its index i. In the next row where the first two elements have been switched, where i = 1 and the value is 2, 2 is divisible by i. In the next position, index i=2 is divisible by its element value of 1. Similar logic is applied to form each 
 
-next position, index i = 2 is divisible by its element value of 7. Similar logic is applied to form each of the subsequent rows.
-Function Description
+In the first row, both conditions hold for all elements: each i equals the value at index i, so each iis divisible by the element and each element is divisible by its index i. In the next row where the first two elements have been switched, where i = 1 and the value is 2, 2 is divisible by i. In the next position, index i=2 is divisible by its element value of 1. Similar logic is applied to form each of the subsequent rows.
+
+
+# Function Description
 Complete the function arrangements in the editor below. The function must return the number of beautiful arrangements possible.
-arrangements has the following parameter(s):
-n: an integer
+
+arrangements has the following parameter(s):  
+
+n: an integer  
+
 1
-Constraints
-•1<n<20
-2
-▼Input Format For Custom Testing
+# Constraints  
+
+• 1 < n < 20  
+
+
+# Input Format For Custom Testing
 The first line contains an integer, n.
-▼Sample Case 0
-Sample Input 0
-2
-Sample Output 0
-2
+
+# Sample Case 0
+Sample Input 0  
+
+2  
+
+Sample Output 0  
+
+2  
+
 Language
 C
 Autocomplete Ready
